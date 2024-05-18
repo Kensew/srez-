@@ -15,19 +15,20 @@
                 <TextBox x:Name="TemperatureTextBox" Width="100" Margin="5"/>
                 <Button Content="Add" Click="AddButton_Click" Margin="5"/>
             </StackPanel>
-            
-            <DataGrid x:Name="WeatherDataGrid" AutoGenerateColumns="False" Margin="10" IsReadOnly="True" SelectionChanged="WeatherDataGrid_SelectionChanged">
+
+            <DataGrid x:Name="WeatherDataGrid" AutoGenerateColumns="False" Margin="10" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
                     <DataGridTextColumn Header="Temperature" Binding="{Binding Temperature}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-            
+
             <StackPanel Orientation="Horizontal" Margin="10">
                 <Button Content="Sort" Click="SortButton_Click" Margin="5"/>
                 <Button Content="Filter" Click="FilterButton_Click" Margin="5"/>
+                <Button Content="Save as .txt" Margin="5" Click="SaveAsTXT"/>
             </StackPanel>
-            
+
             <TextBlock x:Name="StatisticsTextBlock" Margin="10"/>
         </StackPanel>
     </Grid>
